@@ -7,8 +7,8 @@
 # импортируем модуль рандом
 import random
 
-print("Добро пожаловть в игру /// 'Угадай число'")
-print("ver 0.0")
+print("Добро пожаловть в игру 'Угадай число'")
+print("ver 1.0")
 print("Игра предназначена для двойх игроков.")
 
 
@@ -32,6 +32,10 @@ while game:
     if step == 1:
         print(f"Число угадывает {name_player_one}!")
         number = int(input("И ваше число: "))
+        while number <= 0:
+            print("Ввели неверное чило!")
+            number = int(input("И ваше новое число: "))
+
         if win_number == number:
             print(f"{name_player_one} вы выйграли!!! угадав число {number}")
             print("Игра заверщена!")
@@ -43,6 +47,9 @@ while game:
     else:
         print(f"Число угадывает {name_player_two}!")
         number = int(input("И ваше число: "))
+        while number <= 0:
+            print("Ввели неверное чило!")
+            number = int(input("И ваше новое число: "))
         if win_number == number:
             print(f"{name_player_two} вы выйграли!!! угадав число {number}")
             print("Игра заверщена!")
