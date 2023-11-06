@@ -18,7 +18,7 @@ def new_game():
 
         gusses.append(guss)
 
-        correct_gusses = check_answer(questions.get(key), guss)
+        correct_gusses += check_answer(questions.get(key), guss)
         question_num += 1
 
     display_score(correct_gusses, gusses)
@@ -57,6 +57,7 @@ def play_again():
     if res == "YES":
         return True
     else:
+        print("Конец!")
         return False
 
 
@@ -73,7 +74,7 @@ answers = [
     ["А. Джордж Лукас", "B. Робби Райан", "C. Джек Кардифф", "D. Федон Папамайкл"],
     ["А. Злобный санта", "B. Тайна музея восковых фигур",
         "C. Дом дьявола", "D. Проклятие Франкенштейна"],
-    ["А. Желеный", "B. Красный", "C. Желтый", "D. Синий"],
+    ["А. Зеленый", "B. Красный", "C. Желтый", "D. Синий"],
     ["А. Ядовитый плющ ", "B. Безумная любовь", "C. Орать", "D. Зеркало"]
 ]
 
